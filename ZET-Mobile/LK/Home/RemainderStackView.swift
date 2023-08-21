@@ -47,6 +47,7 @@ class RemainderStackView: UIStackView {
         layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 20, right: 16)
         messagesRemainder.plusText.isHidden = false
   
+      
         addArrangedSubview(minutesRemainder)
         addArrangedSubview(internetRemainder)
         addArrangedSubview(messagesRemainder)

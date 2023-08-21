@@ -196,8 +196,10 @@ class RoumingViewController: UIViewController, UIScrollViewDelegate {
                         hideActivityIndicator(uiView: self.view)
                         requestAnswer(message: defaultLocalizer.stringForKey(key: "service is temporarily unavailable"))
                     }
+                    print("roamingerror")
                 },
                 onCompleted: {
+                    client.requestObservable.tabIndicator = "1"
                     DispatchQueue.main.async { [self] in
                         getRequest2()
                     }
@@ -257,13 +259,17 @@ class RoumingViewController: UIViewController, UIScrollViewDelegate {
                         hideActivityIndicator(uiView: self.view)
                         requestAnswer(message: defaultLocalizer.stringForKey(key: "service is temporarily unavailable"))
                     }
+                    client.requestObservable.tabIndicator = "0"
+                    print("roamingerror")
                 },
                 onCompleted: {
+                    client.requestObservable.tabIndicator = "0"
                     DispatchQueue.main.async { [self] in
                         setupView()
                         
                     }
-                   print("Completed event.")
+                    print("roamingCompleted")
+                    print("Completed event.")
                     
                 }).disposed(by: disposeBag)
               }

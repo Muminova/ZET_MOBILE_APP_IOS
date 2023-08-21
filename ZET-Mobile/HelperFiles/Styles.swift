@@ -246,13 +246,13 @@ extension UIViewController {
 public extension UIView {
     func showAnimation(_ completionBlock: @escaping () -> Void) {
       isUserInteractionEnabled = false
-        UIView.animate(withDuration: 0.1,
+        UIView.animate(withDuration: 0,
                        delay: 0,
                        options: .curveLinear,
                        animations: { [weak self] in
                             self?.transform = CGAffineTransform.init(scaleX: 0.95, y: 0.95)
         }) {  (done) in
-            UIView.animate(withDuration: 0.1,
+            UIView.animate(withDuration: 0,
                            delay: 0,
                            options: .curveLinear,
                            animations: { [weak self] in

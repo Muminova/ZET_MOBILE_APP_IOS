@@ -8,6 +8,7 @@
 import UIKit
 import iOSDropDown
 
+
 class ReplyToZetView: UIView {
 
     let defaultLocalizer = AMPLocalizeUtils.defaultLocalizer
@@ -65,6 +66,70 @@ class ReplyToZetView: UIView {
         return textfield
     }()
     
+    //contact number
+    
+    lazy var titleContactNumber: UILabel = {
+        let titleContactNumber = UILabel()
+        titleContactNumber.text = defaultLocalizer.stringForKey(key: "FeedbackContactNumber")
+        titleContactNumber.numberOfLines = 0
+        titleContactNumber.textColor = UIColor(red: 0.51, green: 0.51, blue: 0.51, alpha: 1.00)
+        titleContactNumber.font = UIFont.systemFont(ofSize: 16)
+        titleContactNumber.lineBreakMode = NSLineBreakMode.byWordWrapping
+        titleContactNumber.textAlignment = .left
+        titleContactNumber.frame = CGRect(x: 20, y: 200, width: 300, height: 20)
+        titleContactNumber.autoresizesSubviews = true
+        titleContactNumber.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        return titleContactNumber
+    }()
+    
+    let contactNumberView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.register(CollectionPrizeViewCell.self, forCellWithReuseIdentifier: cellID3)
+        cv.showsHorizontalScrollIndicator = false
+        cv.frame = CGRect(x: 20, y: 230, width: UIScreen.main.bounds.size.width - 40, height: 50)
+        cv.layer.cornerRadius = 16
+        cv.layer.borderWidth = 1
+        cv.layer.borderColor = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1).cgColor
+        cv.backgroundColor = .clear
+        return cv
+    }()
+    
+    lazy var contactNumberField: UITextField = {
+        let textfield = UITextField()
+        textfield.frame = CGRect(x: prefixContactNumber.text!.count * 10 + 15, y: 230, width: 300, height: 50)
+       // textfield.layer.borderColor = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1).cgColor
+        textfield.keyboardType = .numberPad
+        //textfield.layer.cornerRadius = 16
+        //textfield.layer.borderWidth = 1
+        textfield.placeholder = "800800800"
+       // textfield.text = "+992 "
+        textfield.textAlignment = .left
+        textfield.tag = 1
+        textfield.font = UIFont.systemFont(ofSize: 16)
+        textfield.textColor = colorBlackWhite
+        textfield.backgroundColor = .clear
+        return textfield
+    }()
+    
+    lazy var prefixContactNumber: UILabel = {
+        let prefixContactNumber = UILabel()
+        prefixContactNumber.frame = CGRect(x: 35, y: 230, width: UIScreen.main.bounds.size.width - 40, height: 50)
+        prefixContactNumber.text = "+992 "
+        prefixContactNumber.numberOfLines = 0
+        prefixContactNumber.textColor = colorBlackWhite
+        prefixContactNumber.font = UIFont.systemFont(ofSize: 16)
+        prefixContactNumber.lineBreakMode = NSLineBreakMode.byWordWrapping
+        prefixContactNumber.textAlignment = .left
+        prefixContactNumber.autoresizesSubviews = true
+        prefixContactNumber.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        prefixContactNumber.backgroundColor = .clear
+        return prefixContactNumber
+    }()
+    
+    
     lazy var titleThree: UILabel = {
         let titleOne = UILabel()
         titleOne.text = defaultLocalizer.stringForKey(key: "your_message")
@@ -73,7 +138,7 @@ class ReplyToZetView: UIView {
         titleOne.font = UIFont.systemFont(ofSize: 16)
         titleOne.lineBreakMode = NSLineBreakMode.byWordWrapping
         titleOne.textAlignment = .left
-        titleOne.frame = CGRect(x: 20, y: 200, width: 300, height: 20)
+        titleOne.frame = CGRect(x: 20, y: 300, width: 300, height: 20)
         titleOne.autoresizesSubviews = true
         titleOne.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         return titleOne
@@ -81,7 +146,7 @@ class ReplyToZetView: UIView {
     
     lazy var text_message: UITextView = {
         let textfield = UITextView()
-        textfield.frame = CGRect(x: 20, y: 230, width: UIScreen.main.bounds.size.width - 40, height: 150)
+        textfield.frame = CGRect(x: 20, y: 330, width: UIScreen.main.bounds.size.width - 40, height: 150)
         textfield.layer.cornerRadius = 16
         textfield.layer.borderColor = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1).cgColor
         textfield.layer.borderWidth = 1
@@ -100,7 +165,7 @@ class ReplyToZetView: UIView {
         titleRed.font = UIFont.systemFont(ofSize: 14)
         titleRed.lineBreakMode = NSLineBreakMode.byWordWrapping
         titleRed.textAlignment = .left
-        titleRed.frame = CGRect(x: 20, y: 390, width: UIScreen.main.bounds.size.width - 40, height: 20)
+        titleRed.frame = CGRect(x: 20, y: 490, width: UIScreen.main.bounds.size.width - 40, height: 20)
         titleRed.autoresizesSubviews = true
         titleRed.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         titleRed.isHidden = true
@@ -108,7 +173,7 @@ class ReplyToZetView: UIView {
     }()
 
     lazy var button: UIButton = {
-        let button = UIButton(frame: CGRect(x: 40, y: 400, width: Int(UIScreen.main.bounds.size.width) - 80, height: 40))
+        let button = UIButton(frame: CGRect(x: 40, y: 500, width: Int(UIScreen.main.bounds.size.width) - 80, height: 40))
         button.backgroundColor = .clear
         button.setTitle(defaultLocalizer.stringForKey(key: "Upload_Screenshot") + " ", for: .normal)
         button.setTitleColor(.orange, for: .normal)
@@ -121,7 +186,7 @@ class ReplyToZetView: UIView {
     }()
 
     lazy var button_send: UIButton = {
-        let button = UIButton(frame: CGRect(x: 40, y: 460, width: Int(UIScreen.main.bounds.size.width) - 80, height: 40))
+        let button = UIButton(frame: CGRect(x: 40, y: 560, width: Int(UIScreen.main.bounds.size.width) - 80, height: 40))
         button.backgroundColor = UIColor(red: 1.00, green: 0.50, blue: 0.05, alpha: 1.00)
         button.setTitle(defaultLocalizer.stringForKey(key: "Send"), for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -151,9 +216,18 @@ class ReplyToZetView: UIView {
         
         type_message.isSearchEnable = false
         type_message.selectedRowColor = .lightGray
+        
         let paddingView2: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
         type_message.leftView = paddingView2
         type_message.leftViewMode = .always
+        
+        let paddingView3: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
+        contactNumberField.leftView = paddingView3
+        contactNumberField.leftViewMode = .always
+        
+        contactNumberField.attributedPlaceholder = NSAttributedString(
+            string: "800800800",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.74, green: 0.74, blue: 0.74, alpha: 1.00)])
         
         text_message.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 4, right: 4)
         
@@ -162,8 +236,16 @@ class ReplyToZetView: UIView {
         button.imageView?.contentMode = .scaleAspectFit
         button.semanticContentAttribute = .forceRightToLeft
         
+        
         self.addSubview(titleOne)
         self.addSubview(titleTwo)
+        
+        self.addSubview(titleContactNumber)
+        self.addSubview(contactNumberView)
+        self.addSubview(prefixContactNumber)
+        self.addSubview(contactNumberField)
+      
+    
         self.addSubview(titleThree)
         self.addSubview(email)
         self.addSubview(type_message)
@@ -173,5 +255,7 @@ class ReplyToZetView: UIView {
         self.addSubview(button_send)
 
     }
+    
+
     
 }

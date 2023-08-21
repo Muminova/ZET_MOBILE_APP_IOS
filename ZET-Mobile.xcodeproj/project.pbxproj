@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D112E3B456C5AC8E14F4755 /* Pods_ZET_MobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573FDFC5387FAE5585F585A6 /* Pods_ZET_MobileTests.framework */; };
-		906067D693E6E819D91B6072 /* Pods_ZET_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41715B731154ADE36F11692E /* Pods_ZET_Mobile.framework */; };
 		B8049460294044F90094782E /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804945F294044F90094782E /* CompetitionViewController.swift */; };
 		B80494622940451F0094782E /* CompetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80494612940451E0094782E /* CompetitionView.swift */; };
 		B804946429404C6E0094782E /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804946329404C6E0094782E /* ParticipateViewController.swift */; };
@@ -165,7 +163,6 @@
 		B8CD5A8C27D52755007D189F /* PacketsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD5A8B27D52755007D189F /* PacketsData.swift */; };
 		B8CD5A8E27D6721E007D189F /* UsageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD5A8D27D6721E007D189F /* UsageData.swift */; };
 		B8DD080B28EFA016008EF83F /* ReplyGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DD080A28EFA015008EF83F /* ReplyGallery.swift */; };
-		E5312EEAE85F1C75BD17F53E /* Pods_ZET_Mobile_ZET_MobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E114B37D589EA2D44588A5D /* Pods_ZET_Mobile_ZET_MobileUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,13 +183,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02E02524BA60BC8C541D274D /* Pods-ZET-Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZET-Mobile.debug.xcconfig"; path = "Target Support Files/Pods-ZET-Mobile/Pods-ZET-Mobile.debug.xcconfig"; sourceTree = "<group>"; };
-		0D5CB483BBE95A763981D2CD /* Pods-ZET-MobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZET-MobileTests.debug.xcconfig"; path = "Target Support Files/Pods-ZET-MobileTests/Pods-ZET-MobileTests.debug.xcconfig"; sourceTree = "<group>"; };
-		41715B731154ADE36F11692E /* Pods_ZET_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZET_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		573FDFC5387FAE5585F585A6 /* Pods_ZET_MobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZET_MobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		78C788DDD5B433A235C78E38 /* Pods-ZET-Mobile-ZET-MobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZET-Mobile-ZET-MobileUITests.release.xcconfig"; path = "Target Support Files/Pods-ZET-Mobile-ZET-MobileUITests/Pods-ZET-Mobile-ZET-MobileUITests.release.xcconfig"; sourceTree = "<group>"; };
-		8E114B37D589EA2D44588A5D /* Pods_ZET_Mobile_ZET_MobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZET_Mobile_ZET_MobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1DF68BD6DBA81B866953F84 /* Pods-ZET-MobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZET-MobileTests.release.xcconfig"; path = "Target Support Files/Pods-ZET-MobileTests/Pods-ZET-MobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		B804945F294044F90094782E /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
 		B80494612940451E0094782E /* CompetitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionView.swift; sourceTree = "<group>"; };
 		B804946329404C6E0094782E /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
@@ -365,8 +355,6 @@
 		B8DD080A28EFA015008EF83F /* ReplyGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyGallery.swift; sourceTree = "<group>"; };
 		B8FDC45E2815AA33003620D4 /* uz-Cyrl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "uz-Cyrl"; path = "uz-Cyrl.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B8FDC45F2815AA33003620D4 /* uz-Cyrl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "uz-Cyrl"; path = "uz-Cyrl.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		BD7353AFFD29CB667BFC193B /* Pods-ZET-Mobile-ZET-MobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZET-Mobile-ZET-MobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZET-Mobile-ZET-MobileUITests/Pods-ZET-Mobile-ZET-MobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DC63A82C91D2FD4051CC9F79 /* Pods-ZET-Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZET-Mobile.release.xcconfig"; path = "Target Support Files/Pods-ZET-Mobile/Pods-ZET-Mobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,7 +362,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				906067D693E6E819D91B6072 /* Pods_ZET_Mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +369,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D112E3B456C5AC8E14F4755 /* Pods_ZET_MobileTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +376,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5312EEAE85F1C75BD17F53E /* Pods_ZET_Mobile_ZET_MobileUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,9 +389,6 @@
 				B82B7DB327C4EC4100570AC0 /* RxRelay.framework */,
 				B82B7DAE27C4EC3A00570AC0 /* RxCocoa.framework */,
 				B82B7DA827C4EC3200570AC0 /* RxCocoa.framework */,
-				41715B731154ADE36F11692E /* Pods_ZET_Mobile.framework */,
-				8E114B37D589EA2D44588A5D /* Pods_ZET_Mobile_ZET_MobileUITests.framework */,
-				573FDFC5387FAE5585F585A6 /* Pods_ZET_MobileTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -414,12 +396,6 @@
 		2E638CA593C4C096CFAFD2F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				02E02524BA60BC8C541D274D /* Pods-ZET-Mobile.debug.xcconfig */,
-				DC63A82C91D2FD4051CC9F79 /* Pods-ZET-Mobile.release.xcconfig */,
-				BD7353AFFD29CB667BFC193B /* Pods-ZET-Mobile-ZET-MobileUITests.debug.xcconfig */,
-				78C788DDD5B433A235C78E38 /* Pods-ZET-Mobile-ZET-MobileUITests.release.xcconfig */,
-				0D5CB483BBE95A763981D2CD /* Pods-ZET-MobileTests.debug.xcconfig */,
-				A1DF68BD6DBA81B866953F84 /* Pods-ZET-MobileTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -881,12 +857,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B87F475127311A1500BAEDFA /* Build configuration list for PBXNativeTarget "ZET-Mobile" */;
 			buildPhases = (
-				7CEEA3EC38BE27021E263DED /* [CP] Check Pods Manifest.lock */,
 				B87F472327311A1000BAEDFA /* Sources */,
 				B87F472427311A1000BAEDFA /* Frameworks */,
 				B87F472527311A1000BAEDFA /* Resources */,
-				A786EC940D0D2F7CAF8AE1C7 /* [CP] Embed Pods Frameworks */,
-				522F4946CF5AEB8E2F6B0E3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -901,7 +874,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B87F475427311A1500BAEDFA /* Build configuration list for PBXNativeTarget "ZET-MobileTests" */;
 			buildPhases = (
-				8B79A41AF89DDB934E120D2A /* [CP] Check Pods Manifest.lock */,
 				B87F473927311A1500BAEDFA /* Sources */,
 				B87F473A27311A1500BAEDFA /* Frameworks */,
 				B87F473B27311A1500BAEDFA /* Resources */,
@@ -920,12 +892,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B87F475727311A1500BAEDFA /* Build configuration list for PBXNativeTarget "ZET-MobileUITests" */;
 			buildPhases = (
-				BB641FB6F11A46B0084173A5 /* [CP] Check Pods Manifest.lock */,
 				B87F474427311A1500BAEDFA /* Sources */,
 				B87F474527311A1500BAEDFA /* Frameworks */,
 				B87F474627311A1500BAEDFA /* Resources */,
-				9AB816206625350F4EBE9A5E /* [CP] Embed Pods Frameworks */,
-				2B61C8281CC9656BA87B4F30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1010,143 +979,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2B61C8281CC9656BA87B4F30 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile-ZET-MobileUITests/Pods-ZET-Mobile-ZET-MobileUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile-ZET-MobileUITests/Pods-ZET-Mobile-ZET-MobileUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile-ZET-MobileUITests/Pods-ZET-Mobile-ZET-MobileUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		522F4946CF5AEB8E2F6B0E3F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile/Pods-ZET-Mobile-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile/Pods-ZET-Mobile-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile/Pods-ZET-Mobile-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7CEEA3EC38BE27021E263DED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZET-Mobile-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8B79A41AF89DDB934E120D2A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZET-MobileTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9AB816206625350F4EBE9A5E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile-ZET-MobileUITests/Pods-ZET-Mobile-ZET-MobileUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile-ZET-MobileUITests/Pods-ZET-Mobile-ZET-MobileUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile-ZET-MobileUITests/Pods-ZET-Mobile-ZET-MobileUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A786EC940D0D2F7CAF8AE1C7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile/Pods-ZET-Mobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile/Pods-ZET-Mobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZET-Mobile/Pods-ZET-Mobile-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BB641FB6F11A46B0084173A5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZET-Mobile-ZET-MobileUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B87F472327311A1000BAEDFA /* Sources */ = {
@@ -1482,7 +1314,6 @@
 		};
 		B87F475227311A1500BAEDFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02E02524BA60BC8C541D274D /* Pods-ZET-Mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1492,7 +1323,7 @@
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = HPE5MZVLNF;
 				INFOPLIST_FILE = "ZET-Mobile/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1511,7 +1342,6 @@
 		};
 		B87F475327311A1500BAEDFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC63A82C91D2FD4051CC9F79 /* Pods-ZET-Mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1521,7 +1351,7 @@
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = HPE5MZVLNF;
 				INFOPLIST_FILE = "ZET-Mobile/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1540,7 +1370,6 @@
 		};
 		B87F475527311A1500BAEDFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D5CB483BBE95A763981D2CD /* Pods-ZET-MobileTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1563,7 +1392,6 @@
 		};
 		B87F475627311A1500BAEDFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1DF68BD6DBA81B866953F84 /* Pods-ZET-MobileTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1586,7 +1414,6 @@
 		};
 		B87F475827311A1500BAEDFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD7353AFFD29CB667BFC193B /* Pods-ZET-Mobile-ZET-MobileUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1607,7 +1434,6 @@
 		};
 		B87F475927311A1500BAEDFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78C788DDD5B433A235C78E38 /* Pods-ZET-Mobile-ZET-MobileUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

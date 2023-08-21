@@ -94,6 +94,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.11.0):
     - GoogleUtilities/Logger
   - iOSDropDown (0.4.0)
+  - IQKeyboardManagerSwift (6.5.12)
   - Koyomi (1.2.7)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
@@ -136,6 +137,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - FSCalendar
   - iOSDropDown
+  - IQKeyboardManagerSwift
   - Koyomi
   - Moya (~> 13.0.0)
   - MultiSlider
@@ -166,6 +168,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - iOSDropDown
+    - IQKeyboardManagerSwift
     - Koyomi
     - Moya
     - MultiSlider
@@ -201,6 +204,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: ea169759df570f4e37bdee1623ec32a7e64e67c4
   GoogleUtilities: c2bdc4cf2ce786c4d2e6b3bcfd599a25ca78f06f
   iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
+  IQKeyboardManagerSwift: 371b08cb39664fb56030f5345c815a4ffc74bbc0
   Koyomi: f03615b8d2bb5a5a4752c6404a9794ed7ef7b327
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   MultiSlider: 66271d410330e63ded9e468d4ef420d5dbe31d2e
@@ -221,6 +225,6 @@ SPEC CHECKSUMS:
   YandexMapKit: f222923561fe159dd8480d927f61950fc5ff3b8d
   YandexRuntime: 2547d72a3ce4757f16ad188cfbe8a124ae13d806
 
-PODFILE CHECKSUM: 0920a0cd3a09cc9723ec43f9afcb3b0b8de2f150
+PODFILE CHECKSUM: b68b543d702bc42fbf4ba10b2ff2dfe56a0c2625
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.1

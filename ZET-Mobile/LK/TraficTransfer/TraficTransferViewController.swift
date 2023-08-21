@@ -262,9 +262,7 @@ class TraficTransferViewController: UIViewController, UIScrollViewDelegate {
             do{
               try client.getTransferRequest().subscribe(
                 onNext: { result in
-                  print(result)
                     DispatchQueue.main.async {
-                        
                         self.balances_data.append([String(result.balances.offnet.now) , String(result.balances.onnet.now), String(result.balances.mb.now), String(result.balances.sms.now)])
                         
                         if String(result.subscriberBalance) != "" {
@@ -292,6 +290,7 @@ class TraficTransferViewController: UIViewController, UIScrollViewDelegate {
                     }
                 },
                 onCompleted: {
+                    client.requestObservable.tabIndicator = "1"
                     DispatchQueue.main.async { [self] in
                         sendHistoryRequest()
                     }
@@ -313,6 +312,7 @@ class TraficTransferViewController: UIViewController, UIScrollViewDelegate {
                     DispatchQueue.main.async { [self] in
                         
                         if result.history != nil {
+                            
                             print(result.history!.count)
                             for i in 0 ..< result.history!.count {
                                 var tableData = [String]()
@@ -361,8 +361,10 @@ class TraficTransferViewController: UIViewController, UIScrollViewDelegate {
                         hideActivityIndicator(uiView: self.view)
                         requestAnswer(status: false, message: defaultLocalizer.stringForKey(key: "service is temporarily unavailable"))
                     }
+                    client.requestObservable.tabIndicator = "0"
                 },
                 onCompleted: {
+                    client.requestObservable.tabIndicator = "0"
                     DispatchQueue.main.async { [self] in
                         setupView()
                         setupTabCollectionView()

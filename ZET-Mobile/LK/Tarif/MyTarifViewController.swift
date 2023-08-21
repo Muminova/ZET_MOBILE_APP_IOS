@@ -39,6 +39,7 @@ class MyTarifViewController: UIViewController, UIScrollViewDelegate, CellTarifiA
     var y_pozition = 240
     
     let table = UITableView()
+    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
     
     let TarifBalanceView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -72,6 +73,10 @@ class MyTarifViewController: UIViewController, UIScrollViewDelegate, CellTarifiA
     var availables_data = [[String]]()
     var unlim_data = [[String]]()
     var options_element = [[String]]()
+    
+    let screenHeight = UIScreen.main.bounds.height
+    let scrollViewContentHeight = 1200 as CGFloat
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,7 +123,9 @@ class MyTarifViewController: UIViewController, UIScrollViewDelegate, CellTarifiA
         scrollView.delegate = self
         scrollView.backgroundColor = .clear
         scrollView.contentSize = CGSize(width: view.frame.width, height: view.frame.height + 896)
+        
         view.addSubview(scrollView)
+    
         
         toolbar = TarifToolbarView(frame: CGRect(x: 0, y: topPadding ?? 0, width: UIScreen.main.bounds.size.width, height: 60))
         tarifView = TarifView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 896))
@@ -282,7 +289,7 @@ class MyTarifViewController: UIViewController, UIScrollViewDelegate, CellTarifiA
         tarifView.tab1.isUserInteractionEnabled = true
         tarifView.tab1.addGestureRecognizer(tapGestureRecognizer)
         
-        print("y_pozition 1")
+        print("y_pozition tab")
         print(y_pozition)
         scrollView.addSubview(TabCollectionView)
         TabCollectionView.backgroundColor = contentColor
@@ -292,42 +299,26 @@ class MyTarifViewController: UIViewController, UIScrollViewDelegate, CellTarifiA
         TabCollectionView.alwaysBounceVertical = true
         TabCollectionView.showsVerticalScrollIndicator = false
     }
+    
+    
+    
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if self.scrollView == scrollView  {
-            if scrollView.contentOffset.y > tarifView.tab1.frame.origin.y {
-                tarifView.zetImage.isHidden = true
-                tarifView.welcome.isHidden = true
-                tarifView.user_name.isHidden = true
-                tarifView.titleOne.isHidden = true
-                TarifBalanceView.isHidden = true
-                self.scrollView.contentOffset.y = 0
-                tarifView.tab1.frame.origin.y = 0
-                tarifView.tab2.frame.origin.y = 0
-                tarifView.tab1Line.frame.origin.y = 40
-                tarifView.tab2Line.frame.origin.y = 40
-                TabCollectionView.frame.origin.y = 45
-            }
-            if scrollView.contentOffset.y < -10 && tarifView.zetImage.isHidden == true {
-                print("y_pozition 2")
-                print(y_pozition)
-                tarifView.zetImage.isHidden = false
-                tarifView.welcome.isHidden = false
-                tarifView.user_name.isHidden = false
-                tarifView.titleOne.isHidden = false
-                TarifBalanceView.isHidden = false
-                self.scrollView.contentOffset.y = 104
-                tarifView.tab1.frame.origin.y = CGFloat(y_pozition)
-                tarifView.tab2.frame.origin.y = CGFloat(y_pozition)
-                tarifView.tab1Line.frame.origin.y = CGFloat(y_pozition + 40)
-                tarifView.tab2Line.frame.origin.y = CGFloat(y_pozition + 40)
-                TabCollectionView.frame.origin.y = CGFloat(y_pozition + 45)
-               
-            }
+      //  let screenHeight = UIScreen.main.bounds.height
+      //  let scrollViewContentHeight = 1200 as CGFloat
+      //  let yOffset = scrollView.contentOffset.y
+        
+        
+        if y_pozition == 530
+        {
+            self.scrollView.isScrollEnabled = true
+            self.table.isScrollEnabled = true
         }
         
-        if table == scrollView {
-            if scrollView.contentOffset.y > 10 {
+        
+        if scrollView == self.scrollView {
+            if scrollView.contentOffset.y > tarifView.tab1.frame.origin.y {
+                
                 tarifView.zetImage.isHidden = true
                 tarifView.welcome.isHidden = true
                 tarifView.user_name.isHidden = true
@@ -339,8 +330,15 @@ class MyTarifViewController: UIViewController, UIScrollViewDelegate, CellTarifiA
                 tarifView.tab1Line.frame.origin.y = 40
                 tarifView.tab2Line.frame.origin.y = 40
                 TabCollectionView.frame.origin.y = 45
+                
+                self.scrollView.isScrollEnabled = false
+                self.table.isScrollEnabled = true
+                
+                print("scrollView1")
+                
             }
-            if scrollView.contentOffset.y < -10 && tarifView.zetImage.isHidden == true {
+            if scrollView.contentOffset.y < -10 && tarifView.zetImage.isHidden == true
+                {
                 print("y_pozition 2")
                 print(y_pozition)
                 tarifView.zetImage.isHidden = false
@@ -348,17 +346,73 @@ class MyTarifViewController: UIViewController, UIScrollViewDelegate, CellTarifiA
                 tarifView.user_name.isHidden = false
                 tarifView.titleOne.isHidden = false
                 TarifBalanceView.isHidden = false
-                self.scrollView.contentOffset.y = 104
+             //   self.scrollView.contentOffset.y = 104
                 tarifView.tab1.frame.origin.y = CGFloat(y_pozition)
                 tarifView.tab2.frame.origin.y = CGFloat(y_pozition)
                 tarifView.tab1Line.frame.origin.y = CGFloat(y_pozition + 40)
                 tarifView.tab2Line.frame.origin.y = CGFloat(y_pozition + 40)
                 TabCollectionView.frame.origin.y = CGFloat(y_pozition + 45)
+                
+                self.scrollView.isScrollEnabled = true
+                self.table.isScrollEnabled = false
+                
+                print("scrollView2")
                
             }
+
+         
+         }
+        
+        if scrollView == self.table {
+            if scrollView.contentOffset.y > 10 {
+                
+                tarifView.zetImage.isHidden = true
+                tarifView.welcome.isHidden = true
+                tarifView.user_name.isHidden = true
+                tarifView.titleOne.isHidden = true
+                TarifBalanceView.isHidden = true
+                self.scrollView.contentOffset.y = 0
+                tarifView.tab1.frame.origin.y = 0
+                tarifView.tab2.frame.origin.y = 0
+                tarifView.tab1Line.frame.origin.y = 40
+                tarifView.tab2Line.frame.origin.y = 40
+                TabCollectionView.frame.origin.y = 45
+                
+                self.scrollView.isScrollEnabled = false
+                self.table.isScrollEnabled = true
+                print("table1")
+            
+               
+            }
+            if scrollView.contentOffset.y < -10 && tarifView.zetImage.isHidden == true {
+                print("y_pozition 2")
+                print(y_pozition)
+                
+                tarifView.zetImage.isHidden = false
+                tarifView.welcome.isHidden = false
+                tarifView.user_name.isHidden = false
+                tarifView.titleOne.isHidden = false
+                TarifBalanceView.isHidden = false
+              //  self.scrollView.contentOffset.y = 104
+                tarifView.tab1.frame.origin.y = CGFloat(y_pozition)
+                tarifView.tab2.frame.origin.y = CGFloat(y_pozition)
+                tarifView.tab1Line.frame.origin.y = CGFloat(y_pozition + 40)
+                tarifView.tab2Line.frame.origin.y = CGFloat(y_pozition + 40)
+                TabCollectionView.frame.origin.y = CGFloat(y_pozition + 45)
+                
+                self.scrollView.isScrollEnabled = true
+                self.table.isScrollEnabled = false
+        
+                
+                print("table2")
+                
+                
+            }
+            
         }
+      
     }
-    
+   
 
     @objc func goToChangeTarif(_ sender: UIButton) {
         alert = UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n\n\n\n", message: "", preferredStyle: .alert)
@@ -621,6 +675,8 @@ class MyTarifViewController: UIViewController, UIScrollViewDelegate, CellTarifiA
     }
 }
 
+
+
 extension MyTarifViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -643,7 +699,7 @@ extension MyTarifViewController: UICollectionViewDelegateFlowLayout, UICollectio
         if collectionView == TarifBalanceView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellTarBalV, for: indexPath) as! TarifBalanceCollectionViewCell
             print(balances_data[indexPath.row][0])
-
+            
             if balances_data[indexPath.row][2] == "true" {
                 cell.titleOne.text = "∞"
                 cell.titleOne.font = UIFont.boldSystemFont(ofSize: 22)
@@ -671,15 +727,21 @@ extension MyTarifViewController: UICollectionViewDelegateFlowLayout, UICollectio
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tabs", for: indexPath) as! TabCollectionViewCell
             if indexPath.row == 0 {
                 table.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - (ContainerViewController().tabBar.frame.size.height + 110 + (topPadding ?? 0) + (bottomPadding ?? 0)))
+                
                 table.register(TarifTabViewCell.self, forCellReuseIdentifier: "tarif_tab_cell")
                 table.delegate = self
                 table.dataSource = self
-                table.rowHeight = UITableView.automaticDimension
+                
                 table.estimatedRowHeight = 120
+                table.rowHeight = UITableView.automaticDimension
+                
                 table.alwaysBounceVertical = true
                 table.backgroundColor = contentColor
                 table.separatorColor = .lightGray
+            
+                
                 cell.addSubview(table)
+                
             }
             else {
                 
