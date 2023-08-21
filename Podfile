@@ -9,7 +9,6 @@ target 'ZET-Mobile' do
 pod "Pulsator"
 pod 'MultiSlider'
 pod 'FSCalendar'
-pod ‘YandexMapKit’, ’3.4’
 pod "Koyomi"
 pod 'RxSwift'
 pod 'RxCocoa'
